@@ -1,5 +1,5 @@
 
-package arvorebinaria;
+package arvores;
 
 
 public class Node {
@@ -69,5 +69,8 @@ public class Node {
         return antigo;
     }
     
-    
+    @Override
+    public String toString(){
+        return "["+this.elemento+"]";
+    }
 }

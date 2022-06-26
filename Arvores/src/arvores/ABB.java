@@ -1,5 +1,5 @@
 
-package arvorebinaria;
+package arvores;
 
 
 public class ABB  extends ArvoreB{
@@ -97,7 +97,7 @@ public class ABB  extends ArvoreB{
     public void remover(int elemento) throws Exception{
        
         Node no = buscaElemento(elemento);
-        Node pai = no.getPai();
+        Node pai = buscaPai(elemento);
         Node filho = no.getEsquerda();
         filho = maior(filho);
        
@@ -106,9 +106,11 @@ public class ABB  extends ArvoreB{
             if(!temEsquerda(no) || !temDireita(no) ){    //nó tem 0 ou 1 filho
                 if(pai.getElemento()>elemento) { //Elemento está à esquerda do pai
                     removerEsquerda(pai);
+                
                 }
                 if(pai.getElemento()< elemento){ //Elemento está à direita do pai
                     removerDireita(pai);
+                    
                 }
             }
                        

@@ -1,5 +1,5 @@
 
-package arvorebinaria;
+package arvores;
 
 
 public class ArvoreB {
